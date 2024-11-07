@@ -6,9 +6,7 @@ This repo contains Jupyter notebooks that cover the coding practice activities i
 
 ### Activity 3: Strings and I/O
 
-Command line applications that demonstrate string formatting and basic I/O operations (input and print).
-
-Mini apps:
+Notebooks that demonstrate string formatting and basic I/O operations (input and print).
 
 1. Draw shapes (left aligned triangle, right aligned triangle, diamond)
 1. Print a monthly calendar
@@ -16,4 +14,13 @@ Mini apps:
 
 
 ### Activity 4: Data structures
+
+Explaining and demonstrating the use of common Python data structures.
+
+1. Stacks (lists)
+1. Queues (lists or deques)
+1. Summarising sales figures - demonstrating dictionaries, lists and tuples, summarising techniques and more string formatting
+
+
+### Activity 5: Functions
 
