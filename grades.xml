@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Students [
+    <!ELEMENT Students (Student+)>
+    <!ELEMENT Student (Name, Mathematics, English, IT)>
+    <!-- 
+        dtd supports an ID data type, which is an NCName 
+        NCName restrictions mean that IDs cannot contain colons (:), spaces, or other special characters like hyphens (-). 
+        They must start with a letter or underscore (_) and can only contain letters, digits, underscores, and periods (.).
+
+        The IDs used for our students contain hyphens, so we can't rely on the ID data type, and instead have to use
+        the CDATA data type.
+    -->
+    <!ATTLIST Student id CDATA #REQUIRED>
+
+    <!-- 
+        The big shortcoming of dtd is that there isn't much support for enforcing data values.
+        In this dtd, we have some comments to explain the expected formats for the PCDATA fields,
+        but the dtd can't validate data entry very well at all
+    -->
+    <!ELEMENT Name (#PCDATA)> <!-- Expected: alphabetic characters, a comma to separate last names and first name, 
+        and other characters that are valid for names -->
+
+    <!ELEMENT Mathematics (Test1, Test2)>
+    <!ELEMENT Test1 (#PCDATA)> <!-- Expected format: integer between 0 and 100, followed by % -->
+    <!ELEMENT Test2 (#PCDATA)> <!-- Expected format: integer between 0 and 100, followed by % -->
+
+    <!ELEMENT English (Essay1, Essay2)>
+    <!ELEMENT Essay1 (#PCDATA)> <!-- Expected values: A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, E+, E, E-, F -->
+    <!ELEMENT Essay2 (#PCDATA)> <!-- Expected values: A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, E+, E, E-, F -->
+
+    <!ELEMENT IT (Activity1, Test2, Essay3)>
+    <!ELEMENT Activity1 (#PCDATA)> <!-- Allowed values: Pass or Fail -->
+    <!ELEMENT Essay3 (#PCDATA)> <!-- Expected values: A+, A, A-, B+, B, B-, C+, C, C-, D+, D, D-, E+, E, E-, F -->
+]>
+
+<Students>
+    <Student id="16430122-1521">
+        <Name>Pace, Camden G.</Name>
+        <Mathematics>
+            <Test1>54%</Test1>
+            <Test2>63%</Test2>
+        </Mathematics>
+        <English>
+            <Essay1>C+</Essay1>
+            <Essay2>B+</Essay2>
+        </English>
+        <IT>
+            <Activity1>Pass</Activity1>
+            <Test2>32%</Test2>
+            <Essay3>C+</Essay3>
+        </IT>
+    </Student>
+    <Student id="16470212-9851">
+        <Name>Weber, Lucy X.</Name>
+        <Mathematics>
+            <Test1>32%</Test1>
+            <Test2>41%</Test2>
+        </Mathematics>
+        <English>
+            <Essay1>C-</Essay1>
+            <Essay2>C-</Essay2>
+        </English>
+        <IT>
+            <Activity1>Fail</Activity1>
+            <Test2>73%</Test2>
+            <Essay3>D+</Essay3>
+        </IT>
+    </Student>
+    <Student id="16060213-9990">
+        <Name>Branch, Caesar A.</Name>
+        <Mathematics>
+            <Test1>73%</Test1>
+            <Test2>81%</Test2>
+        </Mathematics>
+        <English>
+            <Essay1>C-</Essay1>
+            <Essay2>C+</Essay2>
+        </English>
+        <IT>
+            <Activity1>Pass</Activity1>
+            <Test2>63%</Test2>
+            <Essay3>B+</Essay3>
+        </IT>
+    </Student>
+    <Student id="16720905-9422">
+        <Name>Beck, Sara K.</Name>
+        <Mathematics>
+            <Test1>66%</Test1>
+            <Test2>57%</Test2>
+        </Mathematics>
+        <English>
+            <Essay1>C-</Essay1>
+            <Essay2>D+</Essay2>
+        </English>
+        <IT>
+            <Activity1>Pass</Activity1>
+            <Test2>41%</Test2>
+            <Essay3>C-</Essay3>
+        </IT>
+    </Student>
+    <Student id="16471011-5884">
+        <Name>Valenzuela, Daphne E.</Name>
+        <Mathematics>
+            <Test1>43%</Test1>
+            <Test2>45%</Test2>
+        </Mathematics>
+        <English>
+            <Essay1>B+</Essay1>
+            <Essay2>A-</Essay2>
+        </English>
+        <IT>
+            <Activity1>Fail</Activity1>
+            <Test2>63%</Test2>
+            <Essay3>C-</Essay3>
+        </IT>
+    </Student>
+</Students>

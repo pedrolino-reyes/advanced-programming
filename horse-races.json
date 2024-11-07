@@ -1,0 +1,62 @@
+{
+  "races": [
+    {
+      "race_id": "Race 1",
+      "type": "Flat",
+      "weather": "Warm",
+      "results": {
+        "Birthday List": "2",
+        "Goodtime": "N/R",
+        "Black Jug": "9",
+        "Plucky Pedro": "N/R",
+        "Querty": "4"
+      }
+    },
+    {
+      "race_id": "Race 2",
+      "type": "Flat",
+      "weather": "Wet",
+      "results": {
+        "Birthday List": "N/P",
+        "Goodtime": "1",
+        "Black Jug": "N/R",
+        "Plucky Pedro": "N/P",
+        "Querty": "3"
+      }
+    },
+    {
+      "race_id": "Race 3",
+      "type": "Hurdle",
+      "weather": "Cold",
+      "results": {
+        "Birthday List": "3",
+        "Goodtime": "N/R",
+        "Black Jug": "N/P",
+        "Plucky Pedro": "5",
+        "Querty": "N/P"
+      }
+    }
+  ],
+  "horses": [
+    {
+      "name": "Birthday List",
+      "age": 2
+    },
+    {
+      "name": "Goodtime",
+      "age": 3
+    },
+    {
+      "name": "Black Jug",
+      "age": 5
+    },
+    {
+      "name": "Plucky Pedro",
+      "age": 6
+    },
+    {
+      "name": "Querty",
+      "age": 3
+    }
+  ]
+}

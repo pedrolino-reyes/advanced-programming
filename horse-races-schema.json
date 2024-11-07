@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "races": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "race_id": { "type": "string" },
+          "type": { "type": "string", "enum": ["Flat", "Hurdle"] },
+          "weather": { "type": "string", "enum": ["Warm", "Wet", "Cold"] },
+          "results": {
+            "type": "object",
+            "patternProperties": {
+              "^[A-Za-z ]+$": { "type": "string", "pattern": "^(\\d+|N/R|N/P)$" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": ["race_id", "type", "weather", "results"]
+      },
+      "minItems": 1
+    },
+    "horses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "pattern": "^[A-Za-z ]+$" },
+          "age": { "type": "integer", "minimum": 0 }
+        },
+        "required": ["name", "age"]
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["races", "horses"],
+  "additionalProperties": false
+}

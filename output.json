@@ -1,0 +1,19 @@
+{
+    "students": [
+        {
+            "fullName": {
+                "title": "Mrs",
+                "firstName": "Lisa",
+                "surname": "Penny",
+                "other": {
+                    "num": 1,
+                    "names": [
+                        "Melanie"
+                    ]
+                }
+            },
+            "age": 32,
+            "city": "London"
+        }
+    ]
+}
